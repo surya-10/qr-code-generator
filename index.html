@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+        integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="qrcode.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="title">QR Code Generator</h3>
+        <div class="cont">
+            <div class="input">
+                <form action="#" id="form">
+                    <div class="form-grp">
+                        <label for="input">Enter a character or URL</label>
+                        <input type="text" placeholder="enter input" id="input" required>
+                    </div>
+                    <div class="inp-group">
+                        <div class="width">
+                            <label for="width">Width</label>
+                            <input type="number" id="width" required>
+                        </div>
+                        <div class="height">
+                            <label for="height">Height</label>
+                            <input type="number" id="height" required>
+                        </div>
+                    </div>
+                    <div class="form-single-grp">
+                        <label for="bgcolor">QR color</label>
+                        <input type="color" id="bgcolor" value="#ffffff">
+                    </div>
+                    <div class="form-single-grp">
+                        <label for="color">Background color</label>
+                        <input type="color" id="color">
+                    </div>
+                    <label for="format">QR Image Format:</label>
+                    <select id="format">
+                        <option value="jpg">JPG</option>
+                        <option value="png">PNG</option>
+                        <option value="svg">SVG</option>
+                    </select>
+                    <button type="submit">Generate</button>
+                    <a id="download" href="#" download>Download</a>
+                </form>
+            </div>
+            <div class="output">
+                <div id="qrcode">
+                    <img src="qrcode.png" id="img">
+                </div>
+                <div id="loading">
+                    <div class="spinner"></div>
+                    <small>Please wait</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
